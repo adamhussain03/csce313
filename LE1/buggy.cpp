@@ -27,7 +27,7 @@ class Shape {
 
         void addPoints (Point* pts){
             for (int i = 0; i < vertices; i++) {
-                points[i] = new Point();
+                points[i] = new Point(); // allocate memory
                 memcpy(points[i], &pts[i%vertices], sizeof(Point));
             }
         }
@@ -53,11 +53,11 @@ int main () {
     //          tri2 = (1, 2)
     //          tri3 = (2, 0)
 
-    Point tri1 = {0,0};
-    Point tri2;
+    Point tri1 = {0,0}; // create using tuiple
+    Point tri2; // add later
     tri2.x = 1;
     tri2.y = 2;
-    Point tri3(2,0);
+    Point tri3(2,0); //goated
     //std::cout<<"check 1"<<std::endl;
 
 
@@ -92,6 +92,7 @@ int main () {
     std::cout<<"Triangle area: "<<(*tri).area()<<std::endl;
     std::cout<<"Square area: "<<(*quad).area()<<std::endl;
 
+    // fix memory
     delete tri;
     delete quad;
 }
