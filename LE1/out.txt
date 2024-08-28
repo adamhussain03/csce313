@@ -1,0 +1,2 @@
+Triangle area: 2
+Square area: 4
